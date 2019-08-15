@@ -32,15 +32,15 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 |meal|json||||
 
 ### About meal
-|Props|Type|Default|value|
-|:---|:---|:---|:---|
-|rice|json|null||
-|main_dish|json|null||
-|rice_bowl|json|null||
-|side_dish|json|null||
-|soup|json|null||
-|noodles|json|null||
-|dessert|json|null||
+|Props|Type|Default|
+|:---|:---|:---|
+|rice|json|null|
+|main_dish|json|null|
+|rice_bowl|json|null|
+|side_dish|json|null|
+|soup|json|null|
+|noodles|json|null|
+|dessert|json|null|
 
 
 ### About meal's props
