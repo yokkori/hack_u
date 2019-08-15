@@ -12,7 +12,7 @@ $ npm run dev
 ## JSON Props 
 |Props|Type|Default|value|
 |:---|:---|:---|:---|
-|sex|String|null|'man' or 'woman'|
+|sex|Int|null|0(man) or 1(woman)|
 |physicalActivityLevel|Int|null|1~3|
 |wakeUpTime|String|null|'HH:mm'|
 |bedTime|String|null|'HH:mm'|
@@ -35,12 +35,12 @@ $ npm run dev
 |Props|Type|Description|
 |:---|:---|:---|
 |menu|String|メニュー名|
-|calorie|String|カロリー|
-|protein|String|タンパク質|
-|lipid|String|脂質|
-|carbohydrate|String|炭水化物|
-|salt|String|塩分|
-|red|String|栄養分類 赤|
-|green|String|栄養分類 青|
-|yellow|String|栄養分類 黄|
+|calorie|Double|カロリー|
+|protein|Double|タンパク質|
+|lipid|Doulbe|脂質|
+|carbohydrate|Double|炭水化物|
+|salt|Double|塩分|
+|red|Double|栄養分類 赤|
+|green|Double|栄養分類 青|
+|yellow|Double|栄養分類 黄|
 
