@@ -23,10 +23,9 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 とりあえずは以下を試してください。
 ``` bash
-$ npm run install
+$ npm run install #はじめの1回のみでいい 
 $ npm run dev
 ```
-
 
 
 ## JSON Props 
