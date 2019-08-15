@@ -21,10 +21,10 @@
             <option disabled value="">
               性別を選択してください(試作品なので男・女のみ)
             </option>
-            <option :value="'man'">
+            <option :value="0">
               男
             </option>
-            <option :value="'woman'">
+            <option :value="1">
               女
             </option>
           </select>
