@@ -1,0 +1,123 @@
+[
+  {
+    "menu": "わらびもち",
+    "calorie": "95",
+    "protein": "1",
+    "lipid": "0.5",
+    "carbohydrate": "22",
+    "salt": "0",
+    "red": "0",
+    "green": "0.2",
+    "yellow": "1"
+  },
+  {
+    "menu": "チョコシュークリーム",
+    "calorie": "102",
+    "protein": "2.4",
+    "lipid": "7",
+    "carbohydrate": "7",
+    "salt": "0.1",
+    "red": "0.3",
+    "green": "0",
+    "yellow": "0.6"
+  },
+  {
+    "menu": "シュークリーム",
+    "calorie": "84",
+    "protein": "2.4",
+    "lipid": "5.3",
+    "carbohydrate": "6.1",
+    "salt": "0.1",
+    "red": "0.3",
+    "green": "0",
+    "yellow": "0.4"
+  },
+  {
+    "menu": "マンゴーヨーグルト",
+    "calorie": "42",
+    "protein": "1.2",
+    "lipid": "1.2",
+    "carbohydrate": "6.4",
+    "salt": "0",
+    "red": "0.3",
+    "green": "0.1",
+    "yellow": "0.1"
+  },
+  {
+    "menu": "キャラメルナッツショート",
+    "calorie": "123",
+    "protein": "1.6",
+    "lipid": "8.7",
+    "carbohydrate": "9.7",
+    "salt": "0.1",
+    "red": "0.8",
+    "green": "0.2",
+    "yellow": "0.4"
+  },
+  {
+    "menu": "生チョコケーキ",
+    "calorie": "98",
+    "protein": "1.5",
+    "lipid": "5.9",
+    "carbohydrate": "9.6",
+    "salt": "0",
+    "red": "0.7",
+    "green": "0",
+    "yellow": "0.4"
+  },
+  {
+    "menu": "ミルクティーショート",
+    "calorie": "93",
+    "protein": "1.3",
+    "lipid": "5.7",
+    "carbohydrate": "8.9",
+    "salt": "0",
+    "red": "0.8",
+    "green": "0",
+    "yellow": "0.4"
+  },
+  {
+    "menu": "抹茶きなこケーキ",
+    "calorie": "134",
+    "protein": "2",
+    "lipid": "8.8",
+    "carbohydrate": "11.9",
+    "salt": "0.1",
+    "red": "0.9",
+    "green": "0",
+    "yellow": "0.5"
+  },
+  {
+    "menu": "アップルパイ",
+    "calorie": "283",
+    "protein": "2",
+    "lipid": "17.4",
+    "carbohydrate": "29",
+    "salt": "0.6",
+    "red": "0",
+    "green": "0.2",
+    "yellow": "3"
+  },
+  {
+    "menu": "カスタードパイ",
+    "calorie": "298",
+    "protein": "3",
+    "lipid": "19.2",
+    "carbohydrate": "27.8",
+    "salt": "0.5",
+    "red": "0.3",
+    "green": "0",
+    "yellow": "3.2"
+  },
+  {
+    "menu": "ポテチュロ",
+    "calorie": "159",
+    "protein": "2.2",
+    "lipid": "7.1",
+    "carbohydrate": "21.3",
+    "salt": "0.3",
+    "red": "0",
+    "green": "0.5",
+    "yellow": "1.1"
+  }
+]

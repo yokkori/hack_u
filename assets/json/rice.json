@@ -1,0 +1,112 @@
+[
+  {
+    "menu": "（小）ライス130g",
+    "calorie": "221",
+    "protein": "3.9",
+    "lipid": "0",
+    "carbohydrate": "48.1",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "2.8"
+  },
+  {
+    "menu": "（中）ライス 200g",
+    "calorie": "340",
+    "protein": "6",
+    "lipid": "0",
+    "carbohydrate": "74",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "4.3"
+  },
+  {
+    "menu": "（大）ライス 270g",
+    "calorie": "459",
+    "protein": "8.1",
+    "lipid": "0",
+    "carbohydrate": "99.9",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "5.7"
+  },
+  {
+    "menu": "（ミニ）ライス 100g",
+    "calorie": "170",
+    "protein": "3",
+    "lipid": "0",
+    "carbohydrate": "37",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "2.1"
+  },
+  {
+    "menu": "（特大）ライス 340g",
+    "calorie": "578",
+    "protein": "10.2",
+    "lipid": "0",
+    "carbohydrate": "125.8",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "7.2"
+  },
+  {
+    "menu": "（小）麦ご飯 130g",
+    "calorie": "206",
+    "protein": "3.5",
+    "lipid": "0.1",
+    "carbohydrate": "45.4",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "2.6"
+  },
+  {
+    "menu": "（中）麦ご飯 200g",
+    "calorie": "316",
+    "protein": "5.4",
+    "lipid": "0.1",
+    "carbohydrate": "69.8",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "4"
+  },
+  {
+    "menu": "（大）麦ご飯 270g",
+    "calorie": "436",
+    "protein": "7.5",
+    "lipid": "0.2",
+    "carbohydrate": "96.3",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "5.6"
+  },
+  {
+    "menu": "（ミニ）麦ご飯 100g",
+    "calorie": "164",
+    "protein": "2.8",
+    "lipid": "0.1",
+    "carbohydrate": "36.2",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "2.1"
+  },
+  {
+    "menu": "（特大）麦ご飯 340g",
+    "calorie": "551",
+    "protein": "9.5",
+    "lipid": "0.2",
+    "carbohydrate": "121.7",
+    "salt": "0",
+    "red": "0",
+    "green": "0",
+    "yellow": "7.1"
+  }
+]
