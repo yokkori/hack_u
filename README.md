@@ -21,7 +21,15 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-## 追加説明
-今回はpages/index.vueしか変更しない。
+## Props 
+|Props|Type|Default|value|
+|:---|:---|:---|:---|
+|sex|String|null|'man' or 'woman'|
+|physicalActivityLevel|Int|null|1~3|
+|wakeUpTime|String|null|'HH:mm'|
+|bedTime|String|null|'HH:mm'|
+|date|String||ex'2019-08-15T07:01:09.057Z'|
 
-## 送るデータ
+|meal|json||||
+
+
