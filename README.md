@@ -8,7 +8,6 @@
 $ npm run install #はじめの1回のみでいい 
 $ npm run dev
 ```
-pages/index.vueが表示画面のコードです。
 
 ## JSON Props 
 |Props|Type|Default|value|
