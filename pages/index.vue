@@ -21,10 +21,10 @@
             <option disabled value="">
               性別を選択してください(試作品なので男・女のみ)
             </option>
-            <option :value="0">
+            <option :value="'man'">
               男
             </option>
-            <option :value="1">
+            <option :value="'woman'">
               女
             </option>
           </select>
@@ -89,7 +89,7 @@
           <label>
             身体活動レベル
           </label>
-          <select v-model="userInfomations.physicalActivity" class="form-control">
+          <select v-model="userInfomations.physicalActivityLevel" class="form-control">
             <option disabled value="">
               身体活動レベルを選択してください
             </option>
@@ -98,8 +98,8 @@
             </option>
           </select>
         </div>
-        <button type="button" class="btn btn-primary" @click="sendOthers()">
-          送信
+        <button type="button" class="btn btn-primary" @click="sendInfomations()">
+          JSON表示
         </button>
       </div>
     </div>
@@ -193,7 +193,7 @@ export default {
       // this.accept = response.headers.status
 
       // eslint-disable-next-line no-console
-      console.log(this.userInfomations)
+      console.log(JSON.stringify(this.userInfomations))
     }
   }
 }
