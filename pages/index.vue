@@ -97,10 +97,9 @@ export default {
       accept: null,
       physicalActivity: null,
       activeList: [
-        { title: '座位または立位の静的な活動', id: 'level1' },
-        { title: 'ゆっくりした歩行や家事など低強度の活動', id: 'level2' },
-        { title: '長時間持続可能な運動・労働など中強度の活動', id: 'level3' },
-        { title: '頻繁に休みが必要な運動・労働などの高強度の活動', id: 'level4' }
+        { title: '生活の大部分を座っていて、静かな活動が中心だった', level: 1 },
+        { title: '移動や立ってする仕事がある場合や、通勤・家事・軽いスポーツ等を行った', level: 2 },
+        { title: '移動や立ってする仕事が多い場合や、スポーツなどの活発な運動を行った', level: 3 }
       ],
       wakeUpTime: null,
       bedTime: null,
