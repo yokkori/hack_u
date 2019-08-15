@@ -7,6 +7,7 @@ module.exports = {
   parserOptions: {
     parser: 'babel-eslint'
   },
+  // eslintのエラーが治らない場合、extendsの中身を全部消してください
   extends: [
     '@nuxtjs',
     //'prettier',
