@@ -14,10 +14,10 @@
         </button>
         -->
         <div class="form-group">
-          <lavel>
+          <label>
             性別
-          </lavel>
-          <select v-model="sex" class="form-control">
+          </label>
+          <select v-model="userInfomations.sex" class="form-control">
             <option disabled value="">
               性別を選択してください(試作品なので男・女のみ)
             </option>
@@ -34,7 +34,7 @@
             <label>
               {{ item.name }}
             </label>
-            <select v-model="mealInfomations.meal[item.en]" class="form-control">
+            <select v-model="userInfomations.meal[item.en]" class="form-control">
               <option disabled value="">
                 {{ item.name }}を選んでください
               </option>
@@ -44,9 +44,11 @@
             </select>
           </div>
         </div>
+        <!--
         <button type="button" class="btn btn-primary" @click="sendMeal()">
           送信
         </button>
+        -->
       </div>
       <div class="col-sm-6">
         <div class="form-group">
@@ -55,11 +57,11 @@
           </label>
           <VueCtkDateTimePicker
             id="BedTimePicker"
-            v-model="bedTime"
+            v-model="userInfomations.bedTime"
             label="Select time"
             color="firebrick"
-            format="hh:mm"
-            formatted="hh:mm"
+            format="HH:mm"
+            formatted="HH:mm"
             input-size="md"
             minute-interval="5"
             :only-time="true"
@@ -72,11 +74,11 @@
           </label>
           <VueCtkDateTimePicker
             id="WakeUpTimePicker"
-            v-model="wakeUpTime"
+            v-model="userInfomations.wakeUpTime"
             label="Select time"
             color="firebrick"
-            format="hh:mm"
-            formatted="hh:mm"
+            format="HH:mm"
+            formatted="HH:mm"
             input-size="md"
             minute-interval="5"
             :only-time="true"
@@ -87,7 +89,7 @@
           <label>
             身体活動レベル
           </label>
-          <select v-model="physicalActivity" class="form-control">
+          <select v-model="userInfomations.physicalActivity" class="form-control">
             <option disabled value="">
               身体活動レベルを選択してください
             </option>
@@ -117,15 +119,11 @@ export default {
   data () {
     return {
       accept: null,
-      sex: null,
-      physicalActivityLevel: null,
       activeList: [
         { title: '生活の大部分を座っていて、静かな活動が中心だった', level: 1 },
         { title: '移動や立ってする仕事がある場合や、通勤・家事・軽いスポーツ等を行った', level: 2 },
         { title: '移動や立ってする仕事が多い場合や、スポーツなどの活発な運動を行った', level: 3 }
       ],
-      wakeUpTime: null,
-      bedTime: null,
       // mealTime: 'breakfast',
       // 以下のitemsをv-forで表示させる
       items: [
@@ -139,7 +137,11 @@ export default {
         { name: 'デザート', en: 'dessert', data: dessert }
       ],
       // 実際にサーバーに送るためのjson
-      mealInfomations: {
+      userInfomations: {
+        sex: null,
+        physicalActivityLevel: null,
+        wakeUpTime: null,
+        bedTime: null,
         date: new Date(),
         meal: {
           rice: null,
@@ -186,17 +188,12 @@ export default {
       // eslint-disable-next-line no-console
       console.log(JSON.stringify(this.mealInfomations))
     },
-    async sendMeal () {
-      const response = await this.$axios.$post('http://localhost:3000/user/meal', this.mealInfomations)
+    async sendInfomations () {
+      await this.$axios.$post('http://localhost:3000/user/meal', this.mealInfomations)
       // this.accept = response.headers.status
 
       // eslint-disable-next-line no-console
-      console.log(response)
-    },
-    async sendOthers () {
-      const response = await this.$axios.$post('http://localhost:3000/user/physical', this.mealInfomations)
-      // eslint-disable-next-line no-console
-      console.log(response)
+      console.log(this.userInfomations)
     }
   }
 }
