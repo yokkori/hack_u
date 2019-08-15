@@ -21,7 +21,7 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-以下を試してください。
+とりあえずは以下を試してください。
 ``` bash
 $ npm run install
 $ npm run dev
