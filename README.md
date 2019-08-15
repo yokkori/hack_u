@@ -21,5 +21,7 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-# 追加説明
+## 追加説明
 今回はpages/index.vueしか変更しない。
+
+## 送るデータ
