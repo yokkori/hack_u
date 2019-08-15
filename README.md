@@ -35,12 +35,12 @@ $ npm run dev
 |Props|Type|Description|
 |:---|:---|:---|
 |menu|String|メニュー名|
-|calorie|Int|カロリー|
-|protein|Int|タンパク質|
-|lipid|Int|脂質|
-|carbohydrate|Int|炭水化物|
-|salt|Int|塩分|
-|red|Int|栄養分類 赤|
-|green|Int|栄養分類 青|
-|yellow|Int|栄養分類 黄|
+|calorie|Double|カロリー|
+|protein|Double|タンパク質|
+|lipid|Doulbe|脂質|
+|carbohydrate|Double|炭水化物|
+|salt|Double|塩分|
+|red|Double|栄養分類 赤|
+|green|Double|栄養分類 青|
+|yellow|Double|栄養分類 黄|
 
