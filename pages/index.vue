@@ -13,9 +13,25 @@
           晩
         </button>
         -->
+        <div class="form-group">
+          <lavel>
+            性別
+          </lavel>
+          <select v-model="sex" class="form-control">
+            <option disabled value="">
+              性別を選択してください(試作品なので男・女のみ)
+            </option>
+            <option :value="0">
+              男
+            </option>
+            <option :value="1">
+              女
+            </option>
+          </select>
+        </div>
         <div v-for="item in items" :key="item.id">
           <div class="form-group">
-            <label for="exampleSelect1exampleFormControlSelect1">
+            <label>
               {{ item.name }}
             </label>
             <select v-model="mealInfomations.meal[item.en]" class="form-control">
@@ -28,53 +44,59 @@
             </select>
           </div>
         </div>
-        <button type="button" class="btn btn-primary" @click="sendMeal">
+        <button type="button" class="btn btn-primary" @click="sendMeal()">
           送信
         </button>
       </div>
       <div class="col-sm-6">
-        <label>
-          起きた時間
-        </label>
-        <VueCtkDateTimePicker
-          id="WakeUpTimePicker"
-          v-model="wakeUpTime"
-          label="Select time"
-          color="firebrick"
-          format="hh:mm"
-          formatted="hh:mm"
-          input-size="md"
-          minute-interval="5"
-          :only-time="true"
-          :no-label="true"
-        />
-        <label>
-          寝た時間
-        </label>
-        <VueCtkDateTimePicker
-          id="BedTimePicker"
-          v-model="bedTime"
-          label="Select time"
-          color="firebrick"
-          format="hh:mm"
-          formatted="hh:mm"
-          input-size="md"
-          minute-interval="5"
-          :only-time="true"
-          :no-label="true"
-        />
-        <label>
-          運動強度
-        </label>
-        <select v-model="physicalActivity" class="form-control">
-          <option disabled value="">
-            運動強度を選択してください
-          </option>
-          <option v-for="data in activeList" :key="data.id" :value="data.id">
-            {{ data.title }}
-          </option>
-        </select>
-        <button type="button" class="btn btn-primary" @click="sendOthers">
+        <div class="form-group">
+          <label>
+            寝た時間
+          </label>
+          <VueCtkDateTimePicker
+            id="BedTimePicker"
+            v-model="bedTime"
+            label="Select time"
+            color="firebrick"
+            format="hh:mm"
+            formatted="hh:mm"
+            input-size="md"
+            minute-interval="5"
+            :only-time="true"
+            :no-label="true"
+          />
+        </div>
+        <div class="form-group">
+          <label>
+            起きた時間
+          </label>
+          <VueCtkDateTimePicker
+            id="WakeUpTimePicker"
+            v-model="wakeUpTime"
+            label="Select time"
+            color="firebrick"
+            format="hh:mm"
+            formatted="hh:mm"
+            input-size="md"
+            minute-interval="5"
+            :only-time="true"
+            :no-label="true"
+          />
+        </div>
+        <div class="form-group">
+          <label>
+            身体活動レベル
+          </label>
+          <select v-model="physicalActivity" class="form-control">
+            <option disabled value="">
+              身体活動レベルを選択してください
+            </option>
+            <option v-for="data in activeList" :key="data.id" :value="data.level">
+              {{ data.title }}
+            </option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary" @click="sendOthers()">
           送信
         </button>
       </div>
@@ -95,7 +117,8 @@ export default {
   data () {
     return {
       accept: null,
-      physicalActivity: null,
+      sex: null,
+      physicalActivityLevel: null,
       activeList: [
         { title: '生活の大部分を座っていて、静かな活動が中心だった', level: 1 },
         { title: '移動や立ってする仕事がある場合や、通勤・家事・軽いスポーツ等を行った', level: 2 },
@@ -103,7 +126,7 @@ export default {
       ],
       wakeUpTime: null,
       bedTime: null,
-      mealTime: 'breakfast',
+      // mealTime: 'breakfast',
       // 以下のitemsをv-forで表示させる
       items: [
         // importしたjsonをdataに入れる
