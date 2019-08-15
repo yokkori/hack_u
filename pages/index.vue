@@ -41,8 +41,8 @@
           v-model="wakeUpTime"
           label="Select time"
           color="firebrick"
-          format="hh:mm a"
-          formatted="hh:mm a"
+          format="hh:mm"
+          formatted="hh:mm"
           input-size="md"
           minute-interval="5"
           :only-time="true"
@@ -56,8 +56,8 @@
           v-model="bedTime"
           label="Select time"
           color="firebrick"
-          format="hh:mm a"
-          formatted="hh:mm a"
+          format="hh:mm"
+          formatted="hh:mm"
           input-size="md"
           minute-interval="5"
           :only-time="true"
@@ -66,16 +66,16 @@
         <label>
           運動強度
         </label>
-         <select v-model="physicalActivity" class="form-control">
-              <option disabled value="">
-                運動強度を選択してください
-              </option>
-              <option v-for="data in activeList" :key="data.id" :value="data.id">
-                {{ data.title }}
-              </option>
-          </select>
-          <button type="button" class="btn btn-primary" @click="sendOthers">
-            送信
+        <select v-model="physicalActivity" class="form-control">
+          <option disabled value="">
+            運動強度を選択してください
+          </option>
+          <option v-for="data in activeList" :key="data.id" :value="data.id">
+            {{ data.title }}
+          </option>
+        </select>
+        <button type="button" class="btn btn-primary" @click="sendOthers">
+          送信
         </button>
       </div>
     </div>
