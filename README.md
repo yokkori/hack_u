@@ -8,7 +8,7 @@
 $ npm run install #はじめの1回のみでいい 
 $ npm run dev
 ```
-
+そして、pages/index.vueを確認してください。
 
 ## JSON Props 
 |Props|Type|Default|value|
