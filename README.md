@@ -17,18 +17,18 @@ $ npm run dev
 |wakeUpTime|String|null|'HH:mm'|
 |bedTime|String|null|'HH:mm'|
 |date|Date||ex'2019-08-15T07:01:09.057Z'|
-|meal|json||||
+|meal|Object||||
 
 ### About meal
 |Props|Type|Default|
 |:---|:---|:---|
-|rice|json|null|
-|main_dish|json|null|
-|rice_bowl|json|null|
-|side_dish|json|null|
-|soup|json|null|
-|noodles|json|null|
-|dessert|json|null|
+|rice|Object|null|
+|main_dish|Object|null|
+|rice_bowl|Object|null|
+|side_dish|Object|null|
+|soup|Object|null|
+|noodles|Object|null|
+|dessert|Object|null|
 
 
 ### About meal's props
