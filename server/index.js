@@ -14,7 +14,6 @@ app.use(bodyParser.json())
 
 app.post('/urlServlet', function (req, res) {
   console.log(req.body)
-  console.log('aaa')
 })
 
 async function start () {

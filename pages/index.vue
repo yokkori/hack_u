@@ -95,9 +95,11 @@
             </option>
           </select>
         </div>
+        <!--
         <button type="button" class="btn btn-primary" @click="mealshow()">
           JSON表示
         </button>
+        -->
         <button type="button" class="btn btn-primary" @click="sendInfomations()">
           送信
         </button>
