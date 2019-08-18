@@ -12,8 +12,8 @@ config.dev = process.env.NODE_ENV !== 'production'
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-app.post('/urlServlet', function (req, res) {
-  console.log(req.body)
+app.get('/urlServlet', function (req, res) {
+  console.log('success')
 })
 
 async function start () {

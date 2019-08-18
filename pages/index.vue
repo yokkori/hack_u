@@ -263,9 +263,8 @@ export default {
     },
     async sendInfomations () {
       await this.$axios({
-        method: 'post',
-        url: 'http://localhost:3000/urlServlet',
-        data: this.userInfomations
+        method: 'get',
+        url: 'http://localhost:3000/urlServlet'
       })
       // this.accept = response.headers.status
 
