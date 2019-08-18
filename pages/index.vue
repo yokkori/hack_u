@@ -18,8 +18,8 @@
             性別
           </label>
           <select v-model="userInfomations.sex" class="form-control">
-            <option disabled value="">
-              性別を選択してください(試作品なので男・女のみ)
+            <option :value="-1">
+              選択しない
             </option>
             <option :value="0">
               男
@@ -35,9 +35,6 @@
               {{ item.name }}
             </label>
             <select v-model="userInfomations.meal[item.en]" class="form-control">
-              <option disabled value="">
-                {{ item.name }}を選んでください
-              </option>
               <option v-for="data in item.data" :key="data.id" :value="data">
                 {{ data.menu }}
               </option>
@@ -98,8 +95,11 @@
             </option>
           </select>
         </div>
-        <button type="button" class="btn btn-primary" @click="sendInfomations()">
+        <button type="button" class="btn btn-primary" @click="mealshow()">
           JSON表示
+        </button>
+        <button type="button" class="btn btn-primary" @click="sendInfomations()">
+          送信
         </button>
       </div>
     </div>
@@ -120,6 +120,7 @@ export default {
     return {
       accept: null,
       activeList: [
+        { title: '選択しない', level: -1 },
         { title: '生活の大部分を座っていて、静かな活動が中心だった', level: 1 },
         { title: '移動や立ってする仕事がある場合や、通勤・家事・軽いスポーツ等を行った', level: 2 },
         { title: '移動や立ってする仕事が多い場合や、スポーツなどの活発な運動を行った', level: 3 }
@@ -138,19 +139,89 @@ export default {
       ],
       // 実際にサーバーに送るためのjson
       userInfomations: {
-        sex: null,
-        physicalActivityLevel: null,
+        sex: -1,
+        physicalActivityLevel: -1,
         wakeUpTime: null,
         bedTime: null,
         date: new Date(),
         meal: {
-          rice: null,
-          main_dish: null,
-          rice_bowl: null,
-          side_dish: null,
-          soup: null,
-          noodles: null,
-          dessert: null
+          rice: {
+            'menu': '選択なし',
+            'calorie': 0,
+            'protein': 0,
+            'lipid': 0,
+            'carbohydrate': 0,
+            'salt': 0,
+            'red': 0,
+            'green': 0,
+            'yellow': 0
+          },
+          main_dish: {
+            'menu': '選択なし',
+            'calorie': 0,
+            'protein': 0,
+            'lipid': 0,
+            'carbohydrate': 0,
+            'salt': 0,
+            'red': 0,
+            'green': 0,
+            'yellow': 0
+          },
+          rice_bowl: {
+            'menu': '選択なし',
+            'calorie': 0,
+            'protein': 0,
+            'lipid': 0,
+            'carbohydrate': 0,
+            'salt': 0,
+            'red': 0,
+            'green': 0,
+            'yellow': 0
+          },
+          side_dish: {
+            'menu': '選択なし',
+            'calorie': 0,
+            'protein': 0,
+            'lipid': 0,
+            'carbohydrate': 0,
+            'salt': 0,
+            'red': 0,
+            'green': 0,
+            'yellow': 0
+          },
+          soup: {
+            'menu': '選択なし',
+            'calorie': 0,
+            'protein': 0,
+            'lipid': 0,
+            'carbohydrate': 0,
+            'salt': 0,
+            'red': 0,
+            'green': 0,
+            'yellow': 0
+          },
+          noodles: {
+            'menu': '選択なし',
+            'calorie': 0,
+            'protein': 0,
+            'lipid': 0,
+            'carbohydrate': 0,
+            'salt': 0,
+            'red': 0,
+            'green': 0,
+            'yellow': 0
+          },
+          dessert: {
+            'menu': '選択なし',
+            'calorie': 0,
+            'protein': 0,
+            'lipid': 0,
+            'carbohydrate': 0,
+            'salt': 0,
+            'red': 0,
+            'green': 0,
+            'yellow': 0
+          }
         }
         /* breakfast: {
           rice: null,
@@ -189,11 +260,15 @@ export default {
       console.log(JSON.stringify(this.mealInfomations))
     },
     async sendInfomations () {
-      await this.$axios.$post('http://localhost:3000/user/meal', this.mealInfomations)
+      await this.$axios({
+        method: 'post',
+        url: 'http://localhost:3000/urlServlet',
+        data: this.userInfomations
+      })
       // this.accept = response.headers.status
 
       // eslint-disable-next-line no-console
-      console.log(JSON.stringify(this.userInfomations))
+      // console.log(JSON.stringify(this.userInfomations))
     }
   }
 }

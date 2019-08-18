@@ -6,5 +6,6 @@
     "eslint.validate": [
         "javascript",
         {"autoFix": true,"language": "vue"}
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

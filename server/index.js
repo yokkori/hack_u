@@ -2,21 +2,20 @@
 const express = require('express')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
+const bodyParser = require('body-parser')
+
 const app = express()
-
-const axiosBase = require('axios')
-const axios = axiosBase.create({
-  baseURL: 'http://localhost:3000',
-  headers: {
-    'Content-Type': 'application/json',
-    'X-Requested-With': 'XMLHttpRequest'
-  },
-  responseType: 'json'
-})
-
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
 config.dev = process.env.NODE_ENV !== 'production'
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+app.post('/urlServlet', function (req, res) {
+  console.log(req.body)
+  console.log('aaa')
+})
 
 async function start () {
   // Init Nuxt.js
@@ -31,7 +30,6 @@ async function start () {
   } else {
     await nuxt.ready()
   }
-
   // Give nuxt middleware to express
   app.use(nuxt.render)
 
@@ -41,15 +39,5 @@ async function start () {
     message: `Server listening on http://${host}:${port}`,
     badge: true
   })
-  axios.post('/user/meal', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
-  })
-    .then(function (response) {
-      console.log(response)
-    })
-    .catch(function (error) {
-      console.log(error)
-    })
 }
 start()
