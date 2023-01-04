@@ -20,7 +20,7 @@
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "ngx-material-timepicker": "^4.0.2",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "vue-ctk-date-time-picker": "^2.1.1"
